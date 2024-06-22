@@ -1,0 +1,89 @@
+creer une application pour la gestion des courriers arrivé et sortis au niveau de la province larache et des courriers externes. 
+L'application doit permettre de : 
+    - Enregistrer les courriers arrivés et les courriers sortis
+    - Suivre les courriers
+
+- Authentication
+    Roles : 
+        - administrateur : peut ajouter des utilisateurs
+        - fonctionaire : peut enregistrer un courrier arrivé ou sorti
+        - chef de service : peut consulter les courriers arrivés et sortis
+        - Gouverneur et sécrutaire génarale : peut consulter les courriers arrivés et sortis et les suivre
+    
+- Courriers
+    - Type : Arrivé ou Sorti
+    - Date d'arrivée ou de sortie
+    - Objet
+    - Expéditeur
+    - Destinataire
+    - Numéro de courrier
+    - Date de traitement
+    - Observations
+    - Statut : En cours, traité, en attente
+    - pièces jointes : pdf, doc, docx, jpg, png, jpeg
+
+- Tableau de bord 
+    - Statistique sur les courriers arrivés et sortis par Dévision, par service, par mois, par année, total 
+
+- Courier Crud
+    - Ajouter un courrier
+    - Modifier un courrier
+    - Supprimer un courrier
+    - Consulter un Courrier
+    - Consulter la liste des courriers :
+        - pagination
+        - filtre par type, date, statut, service, division, année, mois
+        - tri par date, type, statut, service, division, année, mois
+
+- Utilisateurs
+    - Ajouter un utilisateur
+    - Modifier un utilisateur
+    - Supprimer un utilisateur
+    - Consulter un utilisateur
+
+
+- Base de données
+    - Role
+        - id
+        - nom
+        - created_at
+        - updated_at
+    - Utilisateur
+        - id
+        - nom
+        - prenom
+        - email
+        - password
+        - role id
+        - service
+        - division
+        - created_at
+        - updated_at
+    - Courrier Départ
+        - id
+        - type
+        - date
+        - objet
+        - Ampiliations
+        - destinataires
+        - numero
+        - date_traitement
+        - observations
+        - pieces_jointes
+        - created_at
+        - updated_at
+    - Courrier Arrivé
+        - id
+        - type
+        - date
+        - objet
+        - Affectations
+        - destinataire
+        - numero
+        - numero BO 
+        - date BO
+        - Origine
+        - observations
+        - pieces_jointes
+        - created_at
+        - updated_at
